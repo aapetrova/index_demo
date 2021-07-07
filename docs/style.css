@@ -1,0 +1,18 @@
+body {
+  text-align: justify
+}
+.navbar, .list-group-item.active, .list-group-item.active {
+  background-color: #0F4C81;
+}
+a {
+  text-color: #0F4C81;
+}
+.navbar-default .navbar-nav > .active > a {
+  background-color: #082945;
+}
+.navbar-default .navbar-nav > .active > a:hover {
+  background-color: #082945;
+}
+.navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus {
+  color: white;
+}

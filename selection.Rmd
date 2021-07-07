@@ -1,0 +1,32 @@
+---
+pagetitle: Choose between Indices
+author: 
+output: 
+  html_document:
+    number_sections: false
+    css: style.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,warning=FALSE)
+
+```
+
+\renewcommand{\topfraction}{.85}
+\renewcommand{\bottomfraction}{.7}
+\renewcommand{\textfraction}{.15}
+\renewcommand{\floatpagefraction}{.66}
+
+
+```{r, echo=FALSE,out.width="49%",out.height="15%"}
+knitr::include_graphics(c("logo_blavatnik.svg","logo_coronanet.png"))
+``` 
+
+***
+# Choose between Indices
+***
+
+
+User case: Differences between indices
+
+Make an informed decision about the indices

@@ -1,0 +1,81 @@
+---
+pagetitle: CoronaNet and OxCGRT Index User Guide
+author: 
+output: 
+  html_document:
+    number_sections: false
+    css: style.css
+    #includes:
+      #before_body: inst/assets/dependencies.html
+      #after_body: footer.html
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,warning=FALSE)
+
+```
+
+\renewcommand{\topfraction}{.85}
+\renewcommand{\bottomfraction}{.7}
+\renewcommand{\textfraction}{.15}
+\renewcommand{\floatpagefraction}{.66}
+
+```{r, echo=FALSE,out.width="49%",out.height="15%"}
+knitr::include_graphics(c("logo_blavatnik.svg","logo_coronanet.png"))
+``` 
+
+
+***
+# COVID-19 Consolidated Policy Indices 
+#### A collaboration by the CoronaNet Research Project and Oxford Blavatnik School’s COVID-19 Government Response Tracker (OxCGRT)
+
+<br>
+
+The CoronaNet Research Project and the Oxford Blavatnik School’s COVID-19 Government Response Tracker (OxCGRT) have collaborated to create six new indices that provide the first comprehensive and statistically-validated summaries of government policies made in response to the COVID-19 pandemic. At present these indices cover 189 countries from January 1st, 2020 to January 15th, 2021. We will be updating these regularly with a next release up until March 15th coming in June of 2021. 
+
+This website provides a non-technical overview of the new indices released by CoronaNet and the OxCGRT projects. For a full description of the creation of these indices and the models employed, we refer you to our [working paper](https://osf.io/preprints/socarxiv/rn9xk/). This user guide, by contrast, provides general advice on how these indices can be employed and how to make decisions about when/whether to use the underlying raw data as opposed to the indices.
+
+The six new indices that combine data from both projects are:
+
+* Social distancing index
+* Business restrictions index
+* Mask index
+* Health monitoring index
+* Health resources index
+* School restrictions index
+
+These indices combine data from 154 CoronaNet policy indicators and 10 OxCGRT policy indicators to produce these 6 separate indices. Each index therefore represents a combination of both data sources. The weights used to create the indices from the underlying indicators were created using a statistical measurement model that assumed there was a single underlying dimension for each policy type (i.e., masks, business restrictions, etc). 
+
+We release these indices with the hope and aim of making information on policy responses to the COVID-19 pandemic more accessible to researchers, policy-makers, and the general public. These indices are released in panel dataset format (country - day - policy), which allows for easier analysis of policy changes over time. The current version of the dataset contains country-day observations of over 180 countries. 
+
+<!-- TODO Visualisation -->
+
+***
+
+## Download the Indices
+
+You can download the working paper [here](https://osf.io/preprints/socarxiv/rn9xk/).   
+You can download the indices (by day and country)   [here](https://drive.google.com/uc?export=download&id=1dMCTVPrf-tJyhv_uxr0yAQO-Elx0QOCG).  
+You can download the underlying indicators (by day and country) [here](https://drive.google.com/uc?id=1lorcowHNnF0Vl6pxBjMdjTC4yPhHBLJI&export=download).  
+The codebook describing this data is [here](https://docs.google.com/document/d/1ScKWFv7jOHYVQlsbqvf--yU0mO2JscTsNEmb0SMXcsg/edit?usp=sharing).  
+
+For a discussion of how to explore the underlying data and fit models with these indices using the R statistical software package, we created a blog post that describes how to access the data in R: https://www.robertkubinec.com/post/err_in_vars/
+
+
+***
+
+## Cite the Indices
+
+When you are using the indices, please cite the index paper as well as both datasets:
+
+Robert Kubinec, Joan Barceló, Rafael Goldszmidt, Vanja Grujic, Timothy Model, Caress Schenk, Cindy Cheng, Thomas Hale, Allison Spencer Hartnett, Luca Messerschmidt, Anna Petherick, and Svanhildur Thorvaldsdottir (2021). Statistically Validated Indices for COVID-19 Public Health Policies https://doi.org/10.31235/osf.io/rn9xk
+
+Cheng, Cindy, Joan Barceló, Allison Hartnett, Robert Kubinec, and Luca Messerschmidt. (2020)
+COVID-19 Government Response Event Dataset (CoronaNet v1.0). Nature Human Behaviour.
+
+Thomas Hale, Noam Angrist, Rafael Goldszmidt, Beatriz Kira, Anna Petherick, Toby Phillips, Samuel Webster, Emily Cameron-Blake, Laura Hallas, Saptarshi Majumdar & Helen Tatlow (2021). “A global panel database of pandemic policies (Oxford COVID-19 Government Response Tracker).” Nature Human Behaviour.
+
+License: CC BY-NC 2.0
+
+For questions about the indices, please reach out to: [admin@coronanet-project.org](mailto:admin@coronanet-project.org)
+

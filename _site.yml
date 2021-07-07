@@ -1,0 +1,23 @@
+name: CoronaNet and OxCGRT Index User Guide
+output:
+  html_document:
+    #css: style.css
+    number_sections: yes
+    toc: yes
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
+    #lib_dir: site_libs
+    self_contained: no
+output_dir: docs
+navbar:
+  title: CoronaNet and OxCGRT Index User Guide
+  left:
+  - text: Main Page
+    href: index.html
+  - text: What's New With These Indices
+    href: indices.html
+  - text: Choose between Indices
+    href: selection.html
+  - text: Download the Indices
+    href: download.html
