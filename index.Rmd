@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE,warning=FALSE)
 \renewcommand{\floatpagefraction}{.66}
 
 ```{r, echo=FALSE,out.width="33%",out.height="15%"}
-knitr::include_graphics(c("images/logo_blavatnik.svg", "images/logo_coronanet.png", "images/logo_hfp_wide.jpg"))
+knitr::include_graphics(c("images/logo_blavatnik.svg", "images/logo_coronanet.png", "images/logo_hfp.png"))
 ``` 
 
 
@@ -87,6 +87,3 @@ For questions about the indices, please reach out to: [admin@coronanet-project.o
 
 ## Partners
 
-```{r, echo=FALSE,out.height="50px"}
-#knitr::include_graphics(c("logo_hfp.png", "TUM.png", "NYU.png", "SOM.png", "NU.png", "jataware_logo.png", "LFV_logo.png", "overton_logo.png"))
-``` 

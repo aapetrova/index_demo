@@ -308,7 +308,7 @@ $(document).ready(function () {
 
 
 
-<p><img src="images/logo_blavatnik.svg" width="33%" height="15%" /><img src="images/logo_coronanet.png" width="33%" height="15%" /><img src="images/logo_hfp_wide.jpg" width="33%" height="15%" /></p>
+<p><img src="images/logo_blavatnik.svg" width="33%" height="15%" /><img src="images/logo_coronanet.png" width="33%" height="15%" /><img src="images/logo_hfp.png" width="33%" height="15%" /></p>
 <hr />
 <div id="whats-new-with-these-indices" class="section level1">
 <h1>What’s New With These Indices?</h1>
@@ -323,7 +323,13 @@ How do the Indices Compare to Just Using the Data?
 <p><br> The new indices are designed to solve a specific problem: we have a lot of data across multiple datasets but sometimes we really just want an aggregate, summary measure. At present, the only other aggregate measure for COVID-19 policies is the Stringency Index, which gives a single value for each country. By contrast, these indices are at a lower level of aggregation, assigning a value for specific policy domains. So in principle, these indices are best used when you want a measure of a certain policy domain like school restrictions or masking, but you also don’t want to get too lost in the underlying policy details.</p>
 <p>For that reason, it is important to know the differences between the CoronaNet and OxCGRT datasets. The underlying data from CoronaNet, as we mentioned, contains 154 different indicators which are specific details of different policies, such as whether countries provide tests to all of the population or implement restrictions for specific business industries. You can read about all the indicators we have released so far in <a href="https://docs.google.com/document/d/1ScKWFv7jOHYVQlsbqvf--yU0mO2JscTsNEmb0SMXcsg/edit?usp=sharing">this codebook</a>. Note that these 154 indicators are different than the CoronaNet raw data, which contain even more policy information but have not yet been released in this easier to use format.</p>
 <p>The OxCGRT indicators, by contrast, are all coded on a qualitative scale and tend to have a lot more information in each indicator. For example, while CoronaNet has separate indicators for primary, secondary and elementary school closure, the OxCGRT data has this information contained within a single variable. You can learn more about the OxCGRT data in their <a href="https://www.bsg.ox.ac.uk/research/publications/variation-government-responses-covid-19">working paper</a>.</p>
-<p>Practically speaking, it makes a difference when you are trying to interpret the results of a model or analysis. If you use an index for masks, for example, and find an association with COVID-19 cases, you can interpret that association as applying to a fairly broad array of mask-related restrictions and policies in a country. By contrast, if you use the OxCGRT mask indicator or one of several CoronaNet mask indicators, you can explain an association in terms of very specific mask-related policies and a COVID-19 outcome. <br></p>
+Practically speaking, it makes a difference when you are trying to interpret the results of a model or analysis. If you use an index for masks, for example, and find an association with COVID-19 cases, you can interpret that association as applying to a fairly broad array of mask-related restrictions and policies in a country. By contrast, if you use the OxCGRT mask indicator or one of several CoronaNet mask indicators, you can explain an association in terms of very specific mask-related policies and a COVID-19 outcome. <br><br>
+<div class="figure" style="text-align: center">
+<img src="images/figure.png" alt="Figure: Daily Cross-sectional Correlations between the Aggregated Raw Data and Estimated Indices" width="464" />
+<p class="caption">
+Figure: Daily Cross-sectional Correlations between the Aggregated Raw Data and Estimated Indices
+</p>
+</div>
 </div>
 <button class="accordion">
 Is it ever better to use the indices versus the raw data?
@@ -365,7 +371,7 @@ Is it ever better to use the raw data versus the indices?
 
 <br>
 <div class="partners">
-<a href="https://www.hfp.tum.de/en/home/"><img class="logo" src="images/logo_hfp.jpg" alt="Hochschule für Politik München logo"></a>
+<a href="https://www.hfp.tum.de/en/home/"><img class="logo" src="images/logo_hfp.png" alt="Hochschule für Politik München logo"></a>
     
 <img class="logo" src="images/TUM.png" alt="Technical University of Munich logo">
 

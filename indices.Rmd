@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE,warning=FALSE)
 
 
 ```{r, echo=FALSE,out.width="33%",out.height="15%"}
-knitr::include_graphics(c("images/logo_blavatnik.svg", "images/logo_coronanet.png", "images/logo_hfp_wide.jpg"))
+knitr::include_graphics(c("images/logo_blavatnik.svg", "images/logo_coronanet.png", "images/logo_hfp.png"))
 ``` 
 
 ***
@@ -44,7 +44,10 @@ For that reason, it is important to know the differences between the CoronaNet a
 The OxCGRT indicators, by contrast, are all coded on a qualitative scale and tend to have a lot more information in each indicator. For example, while CoronaNet has separate indicators for primary, secondary and elementary school closure, the OxCGRT data has this information contained within a single variable. You can learn more about the OxCGRT data in their [working paper](https://www.bsg.ox.ac.uk/research/publications/variation-government-responses-covid-19).
 
 Practically speaking, it makes a difference when you are trying to interpret the results of a model or analysis. If you use an index for masks, for example, and find an association with COVID-19 cases, you can interpret that association as applying to a fairly broad array of mask-related restrictions and policies in a country. By contrast, if you use the OxCGRT mask indicator or one of several CoronaNet mask indicators, you can explain an association in terms of very specific mask-related policies and a COVID-19 outcome.
-<br>
+<br><br>
+```{r, echo=FALSE,fig.cap="Figure: Daily Cross-sectional Correlations between the Aggregated Raw Data and Estimated Indices",fig.align='center'}
+knitr::include_graphics(c("images/figure.png"))
+``` 
 </div>
 <button class="accordion">Is it ever better to use the indices versus the raw data?</button>
 <div class="panel"><br>
