@@ -1,5 +1,5 @@
 ---
-pagetitle: Choose between Indices
+pagetitle: Visualisation
 author: 
 output: 
   html_document:
@@ -25,10 +25,5 @@ knitr::include_graphics(c("images/logo_blavatnik.svg", "images/logo_coronanet.pn
 ``` 
 
 ***
-# Choose between Indices
+# Visualisation
 ***
-
-
-User case: Differences between indices
-
-Make an informed decision about the indices

@@ -3,7 +3,7 @@ output:
   html_document:
     #css: style.css
     number_sections: yes
-    toc: yes
+    toc: no
     toc_float:
       collapsed: no
       smooth_scroll: yes
@@ -11,13 +11,17 @@ output:
     self_contained: no
 output_dir: docs
 navbar:
-  title: CoronaNet and OxCGRT Index User Guide
+  title: 
   left:
-  - text: Main Page
+  - text: Consolidated Policy Indices
     href: index.html
-  - text: What's New With These Indices
+  - text: Why New Indices
     href: indices.html
   - text: Choose between Indices
     href: selection.html
-  - text: Download the Indices
+  - text: Download
     href: download.html
+  - text: Visualisation
+    href: visualisation.html
+  - text: About
+    href: about.html

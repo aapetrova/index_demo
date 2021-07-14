@@ -5,6 +5,8 @@ output:
   html_document:
     number_sections: false
     css: style.css
+    includes:
+      after_body: footer.html
 ---
 
 ```{r setup, include=FALSE}
@@ -18,8 +20,8 @@ knitr::opts_chunk$set(echo = TRUE,warning=FALSE)
 \renewcommand{\floatpagefraction}{.66}
 
 
-```{r, echo=FALSE,out.width="49%",out.height="15%"}
-knitr::include_graphics(c("logo_blavatnik.svg","logo_coronanet.png"))
+```{r, echo=FALSE,out.width="33%",out.height="15%"}
+knitr::include_graphics(c("images/logo_blavatnik.svg", "images/logo_coronanet.png", "images/logo_hfp_wide.jpg"))
 ``` 
 
 ***
@@ -29,7 +31,7 @@ knitr::include_graphics(c("logo_blavatnik.svg","logo_coronanet.png"))
 
 You can download the working paper [here](https://osf.io/preprints/socarxiv/rn9xk/).  
 You can download the indices (by day and country) [here](https://drive.google.com/uc?export=download&id=1dMCTVPrf-tJyhv_uxr0yAQO-Elx0QOCG).  
-You can download the underlying indicators (by day and country) [here](https://drive.google.com/uc?id=1lorcowHNnF0Vl6pxBjMdjTC4yPhHBLJI&export=download).  
+You can download the underlying variables (by day and country) [here](https://drive.google.com/uc?id=1lorcowHNnF0Vl6pxBjMdjTC4yPhHBLJI&export=download).  
 The codebook describing this data is [here](https://docs.google.com/document/d/1ScKWFv7jOHYVQlsbqvf--yU0mO2JscTsNEmb0SMXcsg/edit?usp=sharing).  
 
 For a discussion of how to explore the underlying data and fit models with these indices using the R statistical software package, we created a blog post that describes how to access the data in R: https://www.robertkubinec.com/post/err_in_vars/

@@ -20,9 +20,6 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -253,75 +250,6 @@ $(document).ready(function () {
 
 
 
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-.tocify-subheader {
-  display: inline;
-}
-.tocify-subheader .tocify-item {
-  font-size: 0.95em;
-}
-
-</style>
-
-
 
 </head>
 
@@ -329,16 +257,6 @@ div.tocify {
 
 
 <div class="container-fluid main-container">
-
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -351,21 +269,27 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">CoronaNet and OxCGRT Index User Guide</a>
+      <a class="navbar-brand" href="index.html"></a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">Main Page</a>
+  <a href="index.html">Consolidated Policy Indices</a>
 </li>
 <li>
-  <a href="indices.html">What's New With These Indices</a>
+  <a href="indices.html">Why New Indices</a>
 </li>
 <li>
   <a href="selection.html">Choose between Indices</a>
 </li>
 <li>
-  <a href="download.html">Download the Indices</a>
+  <a href="download.html">Download</a>
+</li>
+<li>
+  <a href="visualisation.html">Visualisation</a>
+</li>
+<li>
+  <a href="about.html">About</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -384,7 +308,7 @@ div.tocify {
 
 
 
-<p><img src="logo_blavatnik.svg" width="49%" height="15%" /><img src="logo_coronanet.png" width="49%" height="15%" /></p>
+<p><img src="images/logo_blavatnik.svg" width="33%" height="15%" /><img src="images/logo_coronanet.png" width="33%" height="15%" /><img src="images/logo_hfp_wide.jpg" width="33%" height="15%" /></p>
 <hr />
 <div id="whats-new-with-these-indices" class="section level1">
 <h1>What’s New With These Indices?</h1>
@@ -392,37 +316,81 @@ div.tocify {
 <p>These indices are the first to combine information from multiple data sources on COVID-19 policies and restrictions. We expect these aggregate results to be less sensitive to data coding errors and other measurement issues that arise whenever we try to accurately describe government policies. These are also continuous measures with a minimum of value of 0 and a maximum value of 100, which may permit more fine-grained distinctions between countries.</p>
 <p>Second, and we think quite importantly, these indices have <em>measures of uncertainty</em>. In other words, we are not just releasing an index value for each country and each day but also a range of plausible index values for each country and each day. By doing so we are sharing not just what we think the best answer is, but also how uncertain we are about other plausible answers. This information can help you figure out whether possible measurement and data coding errors could impact your analyses.</p>
 <p><br></p>
-<div id="how-do-the-indices-compare-to-just-using-the-data" class="section level2">
-<h2>How do the Indices Compare to Just Using the Data?</h2>
-<p>The new indices are designed to solve a specific problem: we have a lot of data across multiple datasets but sometimes we really just want an aggregate, summary measure. At present, the only other aggregate measure for COVID-19 policies is the Stringency Index, which gives a single value for each country. By contrast, these indices are at a lower level of aggregation, assigning a value for specific policy domains. So in principle, these indices are best used when you want a measure of a certain policy domain like school restrictions or masking, but you also don’t want to get too lost in the underlying policy details.</p>
+<button class="accordion">
+How do the Indices Compare to Just Using the Data?
+</button>
+<div class="panel">
+<p><br> The new indices are designed to solve a specific problem: we have a lot of data across multiple datasets but sometimes we really just want an aggregate, summary measure. At present, the only other aggregate measure for COVID-19 policies is the Stringency Index, which gives a single value for each country. By contrast, these indices are at a lower level of aggregation, assigning a value for specific policy domains. So in principle, these indices are best used when you want a measure of a certain policy domain like school restrictions or masking, but you also don’t want to get too lost in the underlying policy details.</p>
 <p>For that reason, it is important to know the differences between the CoronaNet and OxCGRT datasets. The underlying data from CoronaNet, as we mentioned, contains 154 different indicators which are specific details of different policies, such as whether countries provide tests to all of the population or implement restrictions for specific business industries. You can read about all the indicators we have released so far in <a href="https://docs.google.com/document/d/1ScKWFv7jOHYVQlsbqvf--yU0mO2JscTsNEmb0SMXcsg/edit?usp=sharing">this codebook</a>. Note that these 154 indicators are different than the CoronaNet raw data, which contain even more policy information but have not yet been released in this easier to use format.</p>
 <p>The OxCGRT indicators, by contrast, are all coded on a qualitative scale and tend to have a lot more information in each indicator. For example, while CoronaNet has separate indicators for primary, secondary and elementary school closure, the OxCGRT data has this information contained within a single variable. You can learn more about the OxCGRT data in their <a href="https://www.bsg.ox.ac.uk/research/publications/variation-government-responses-covid-19">working paper</a>.</p>
-<p>Practically speaking, it makes a difference when you are trying to interpret the results of a model or analysis. If you use an index for masks, for example, and find an association with COVID-19 cases, you can interpret that association as applying to a fairly broad array of mask-related restrictions and policies in a country. By contrast, if you use the OxCGRT mask indicator or one of several CoronaNet mask indicators, you can explain an association in terms of very specific mask-related policies and a COVID-19 outcome.</p>
-<p><br></p>
+<p>Practically speaking, it makes a difference when you are trying to interpret the results of a model or analysis. If you use an index for masks, for example, and find an association with COVID-19 cases, you can interpret that association as applying to a fairly broad array of mask-related restrictions and policies in a country. By contrast, if you use the OxCGRT mask indicator or one of several CoronaNet mask indicators, you can explain an association in terms of very specific mask-related policies and a COVID-19 outcome. <br></p>
 </div>
-<div id="is-it-ever-better-to-use-the-indices-versus-the-raw-data" class="section level2">
-<h2>Is it ever better to use the indices versus the raw data?</h2>
-<p>It is better to use the indices mainly in the following situations:</p>
+<button class="accordion">
+Is it ever better to use the indices versus the raw data?
+</button>
+<div class="panel">
+<p><br> It is better to use the indices mainly in the following situations:</p>
 <ol style="list-style-type: decimal">
 <li><p>You are concerned about data coding errors affecting your analysis. In that case, you can use our measures of uncertainty to see if different plausible values for policy activity affect your results. We wrote a <a href="https://www.robertkubinec.com/post/err_in_vars/">blog post about how to do this with the R statistical software package</a>.</p></li>
-<li><p>You are trying to measure the simultaneous effect of multiple policies on an outcome. It may not be a good idea to include lots of policy indicators in the same analysis/model because these different policies may interact with each other, rendering interpretation difficult. By using the indices, you can avoid this problem and still obtain clear results because the indices are all independent of each other and combine information from lower-level indicators.</p></li>
+<li><p>You are trying to measure the simultaneous effect of multiple policies on an outcome. It may not be a good idea to include lots of policy indicators in the same analysis/model because these different policies may interact with each other, rendering interpretation difficult. By using the indices, you can avoid this problem and still obtain clear results because the indices are all independent of each other and combine information from lower-level indicators. <br></p></li>
 </ol>
-<p><br></p>
 </div>
-<div id="is-it-ever-better-to-use-the-raw-data-versus-the-indices" class="section level2">
-<h2>Is it ever better to use the raw data versus the indices?</h2>
-<p>It is better to use the raw data in the following situations:</p>
+<button class="accordion">
+Is it ever better to use the raw data versus the indices?
+</button>
+<div class="panel">
+<p><br> It is better to use the raw data in the following situations:</p>
 <ol style="list-style-type: decimal">
 <li><p>Your research question is on a specific attribute or dimension of policy, such as antigen tests as opposed to all possible COVID-19 tests. There are more specific indicators on those types of policies.</p></li>
-<li><p>You are not concerned about measurement error, such as when you are quite familiar with the data and data coding errors are unlikely to affect your analyses.</p></li>
+<li><p>You are not concerned about measurement error, such as when you are quite familiar with the data and data coding errors are unlikely to affect your analyses. <br></p></li>
 </ol>
 </div>
+<script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("activePanel");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          });
+        }
+</script>
+</div>
+
+<br>
+<div class="partners">
+<a href="https://www.hfp.tum.de/en/home/"><img class="logo" src="images/logo_hfp.jpg" alt="Hochschule für Politik München logo"></a>
+    
+<img class="logo" src="images/TUM.png" alt="Technical University of Munich logo">
+
+<img class="logo" src="images/NYU.png" alt="New York University Abu Dhabi logo">
+
+<img class="logo" src="images/SOM.png" alt="TUM School of Management at Technical University of Munich logo">
+    
+<img class="logo" src="images/NU.png" alt="Nazarbayev University logo">
+    
+<a href="https://www.jataware.com/"><img class="logo" src="images/jataware_logo.png" alt="Jataware company logo"></a>
+
+<a href="https://www.leibniz-krisen.de/en.html"><img class="logo" src="images/LFV_logo.png" alt="Leibniz Research Alliance
+Crises in a Globalised World logo"></a>
+
+<a href="https://www.overton.io/"><img class="logo" src="images/overton_logo.png" alt="Overton company logo"></a>
+<br>
+<br>
+<hr><br>
+<b>CoronaNet is part of the PERISCOPE consortium, a project funded by the European Commission under the Horizon 2020 Research and Innovation programme (agreement no. 101016233)</b>
+<br><br>
+<a href="https://periscopeproject.eu/"><img class="logo funding" src="images/logo_periscope.png" alt="Logo of the PERISCOPE consortium"></a>
+<img class="logo funding" src="images/european-commission.png" alt="Logo of the European Commission">
 </div>
 
 
-
-</div>
-</div>
 
 </div>
 
@@ -455,32 +423,6 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = false;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

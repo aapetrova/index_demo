@@ -20,9 +20,6 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -253,75 +250,6 @@ $(document).ready(function () {
 
 
 
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-.tocify-subheader {
-  display: inline;
-}
-.tocify-subheader .tocify-item {
-  font-size: 0.95em;
-}
-
-</style>
-
-
 
 </head>
 
@@ -329,16 +257,6 @@ div.tocify {
 
 
 <div class="container-fluid main-container">
-
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -351,21 +269,27 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">CoronaNet and OxCGRT Index User Guide</a>
+      <a class="navbar-brand" href="index.html"></a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">Main Page</a>
+  <a href="index.html">Consolidated Policy Indices</a>
 </li>
 <li>
-  <a href="indices.html">What's New With These Indices</a>
+  <a href="indices.html">Why New Indices</a>
 </li>
 <li>
   <a href="selection.html">Choose between Indices</a>
 </li>
 <li>
-  <a href="download.html">Download the Indices</a>
+  <a href="download.html">Download</a>
+</li>
+<li>
+  <a href="visualisation.html">Visualisation</a>
+</li>
+<li>
+  <a href="about.html">About</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -374,6 +298,11 @@ div.tocify {
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+<link href="css/dygraph.css" rel="stylesheet" />
+<script src="js/dygraph.min.js"></script>
+<script src="js/plot_indices.js"></script>
 
 <div class="fluid-row" id="header">
 
@@ -384,27 +313,30 @@ div.tocify {
 
 
 
-<p><img src="logo_blavatnik.svg" width="49%" height="15%" /><img src="logo_coronanet.png" width="49%" height="15%" /></p>
+<p><img src="images/logo_blavatnik.svg" width="33%" height="15%" /><img src="images/logo_coronanet.png" width="33%" height="15%" /><img src="images/logo_hfp_wide.jpg" width="33%" height="15%" /></p>
 <hr />
 <div id="covid-19-consolidated-policy-indices" class="section level1">
 <h1>COVID-19 Consolidated Policy Indices</h1>
 <div id="a-collaboration-by-the-coronanet-research-project-and-oxford-blavatnik-schools-covid-19-government-response-tracker-oxcgrt" class="section level4">
 <h4>A collaboration by the CoronaNet Research Project and Oxford Blavatnik School’s COVID-19 Government Response Tracker (OxCGRT)</h4>
 <p><br></p>
-<p>The CoronaNet Research Project and the Oxford Blavatnik School’s COVID-19 Government Response Tracker (OxCGRT) have collaborated to create six new indices that provide the first comprehensive and statistically-validated summaries of government policies made in response to the COVID-19 pandemic. At present these indices cover 189 countries from January 1st, 2020 to January 15th, 2021. We will be updating these regularly with a next release up until March 15th coming in June of 2021.</p>
+<p>The CoronaNet Research Project and the Oxford Blavatnik School’s COVID-19 Government Response Tracker (OxCGRT) have collaborated to create six new indices called “COVID-19 Consolidated Policy Indices” (CCPIs) that provide the first comprehensive and statistically-validated summaries of government policies made in response to the COVID-19 pandemic. At present these indices cover 189 countries from January 1st, 2020 to January 15th, 2021. We will be updating these regularly with a next release up until March 15th coming in June of 2021.</p>
 <p>This website provides a non-technical overview of the new indices released by CoronaNet and the OxCGRT projects. For a full description of the creation of these indices and the models employed, we refer you to our <a href="https://osf.io/preprints/socarxiv/rn9xk/">working paper</a>. This user guide, by contrast, provides general advice on how these indices can be employed and how to make decisions about when/whether to use the underlying raw data as opposed to the indices.</p>
 <p>The six new indices that combine data from both projects are:</p>
 <ul>
-<li>Social distancing index</li>
-<li>Business restrictions index</li>
-<li>Mask index</li>
-<li>Health monitoring index</li>
-<li>Health resources index</li>
-<li>School restrictions index</li>
+<li>Mobility Restriction index (CCPI_Mobility)</li>
+<li>Business restrictions index (CCPI_Business)</li>
+<li>Mask index (CCPI_Mask)</li>
+<li>Health monitoring index (CCPI_Monitor)</li>
+<li>Health resources index (CCPI_Resources)</li>
+<li>School restrictions index (CCPI_School)</li>
 </ul>
 <p>These indices combine data from 154 CoronaNet policy indicators and 10 OxCGRT policy indicators to produce these 6 separate indices. Each index therefore represents a combination of both data sources. The weights used to create the indices from the underlying indicators were created using a statistical measurement model that assumed there was a single underlying dimension for each policy type (i.e., masks, business restrictions, etc).</p>
 <p>We release these indices with the hope and aim of making information on policy responses to the COVID-19 pandemic more accessible to researchers, policy-makers, and the general public. These indices are released in panel dataset format (country - day - policy), which allows for easier analysis of policy changes over time. The current version of the dataset contains country-day observations of over 180 countries.</p>
-<!-- TODO Visualisation -->
+<br> <select class="country-search" id="countrySearch" name="country-search"></select> <select class="country-search" id="countrySearch2" name="country-search2"></select> <br><br>
+<div id="indexPlot" style="width: 100%; height:500px;">
+
+</div>
 <hr />
 </div>
 <div id="download-the-indices" class="section level2">
@@ -420,17 +352,45 @@ The codebook describing this data is <a href="https://docs.google.com/document/d
 <h2>Cite the Indices</h2>
 <p>When you are using the indices, please cite the index paper as well as both datasets:</p>
 <p>Robert Kubinec, Joan Barceló, Rafael Goldszmidt, Vanja Grujic, Timothy Model, Caress Schenk, Cindy Cheng, Thomas Hale, Allison Spencer Hartnett, Luca Messerschmidt, Anna Petherick, and Svanhildur Thorvaldsdottir (2021). Statistically Validated Indices for COVID-19 Public Health Policies <a href="https://doi.org/10.31235/osf.io/rn9xk" class="uri">https://doi.org/10.31235/osf.io/rn9xk</a></p>
-<p>Cheng, Cindy, Joan Barceló, Allison Hartnett, Robert Kubinec, and Luca Messerschmidt. (2020) COVID-19 Government Response Event Dataset (CoronaNet v1.0). Nature Human Behaviour.</p>
-<p>Thomas Hale, Noam Angrist, Rafael Goldszmidt, Beatriz Kira, Anna Petherick, Toby Phillips, Samuel Webster, Emily Cameron-Blake, Laura Hallas, Saptarshi Majumdar &amp; Helen Tatlow (2021). “A global panel database of pandemic policies (Oxford COVID-19 Government Response Tracker).” Nature Human Behaviour.</p>
+<p>Cheng, Cindy, Joan Barceló, Allison Hartnett, Robert Kubinec, and Luca Messerschmidt. (2020) COVID-19 Government Response Event Dataset (CoronaNet v1.0). <a href="https://doi.org/10.1038/s41562-020-0909-7">Nature Human Behaviour</a>.</p>
+<p>Thomas Hale, Noam Angrist, Rafael Goldszmidt, Beatriz Kira, Anna Petherick, Toby Phillips, Samuel Webster, Emily Cameron-Blake, Laura Hallas, Saptarshi Majumdar &amp; Helen Tatlow (2021). “A global panel database of pandemic policies (Oxford COVID-19 Government Response Tracker).” <a href="https://doi.org/10.1038/s41562-021-01079-8">Nature Human Behaviour</a>.</p>
 <p>License: CC BY-NC 2.0</p>
 <p>For questions about the indices, please reach out to: <a href="mailto:admin@coronanet-project.org">admin@coronanet-project.org</a></p>
+<hr />
+</div>
+<div id="partners" class="section level2">
+<h2>Partners</h2>
 </div>
 </div>
 
+<br>
+<div class="partners">
+<a href="https://www.hfp.tum.de/en/home/"><img class="logo" src="images/logo_hfp.jpg" alt="Hochschule für Politik München logo"></a>
+    
+<img class="logo" src="images/TUM.png" alt="Technical University of Munich logo">
+
+<img class="logo" src="images/NYU.png" alt="New York University Abu Dhabi logo">
+
+<img class="logo" src="images/SOM.png" alt="TUM School of Management at Technical University of Munich logo">
+    
+<img class="logo" src="images/NU.png" alt="Nazarbayev University logo">
+    
+<a href="https://www.jataware.com/"><img class="logo" src="images/jataware_logo.png" alt="Jataware company logo"></a>
+
+<a href="https://www.leibniz-krisen.de/en.html"><img class="logo" src="images/LFV_logo.png" alt="Leibniz Research Alliance
+Crises in a Globalised World logo"></a>
+
+<a href="https://www.overton.io/"><img class="logo" src="images/overton_logo.png" alt="Overton company logo"></a>
+<br>
+<br>
+<hr><br>
+<b>CoronaNet is part of the PERISCOPE consortium, a project funded by the European Commission under the Horizon 2020 Research and Innovation programme (agreement no. 101016233)</b>
+<br><br>
+<a href="https://periscopeproject.eu/"><img class="logo funding" src="images/logo_periscope.png" alt="Logo of the PERISCOPE consortium"></a>
+<img class="logo funding" src="images/european-commission.png" alt="Logo of the European Commission">
+</div>
 
 
-</div>
-</div>
 
 </div>
 
@@ -463,32 +423,6 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = false;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

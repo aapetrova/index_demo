@@ -5,6 +5,8 @@ output:
   html_document:
     number_sections: false
     css: style.css
+    includes:
+      after_body: footer.html
 ---
 
 ```{r setup, include=FALSE}
@@ -18,8 +20,8 @@ knitr::opts_chunk$set(echo = TRUE,warning=FALSE)
 \renewcommand{\floatpagefraction}{.66}
 
 
-```{r, echo=FALSE,out.width="49%",out.height="15%"}
-knitr::include_graphics(c("logo_blavatnik.svg","logo_coronanet.png"))
+```{r, echo=FALSE,out.width="33%",out.height="15%"}
+knitr::include_graphics(c("images/logo_blavatnik.svg", "images/logo_coronanet.png", "images/logo_hfp_wide.jpg"))
 ``` 
 
 ***
@@ -33,32 +35,50 @@ Second, and we think quite importantly, these indices have *measures of uncertai
 
 <br> 
 
-## How do the Indices Compare to Just Using the Data?
-
-The new indices are designed to solve a specific problem: we have a lot of data across multiple datasets but sometimes we really just want an aggregate, summary measure. At present, the only other aggregate measure for COVID-19 policies is the Stringency Index, which gives a single value for each country. By contrast, these indices are at a lower level of aggregation, assigning a value for specific policy domains. So in principle, these indices are best used when you want a measure of a certain policy domain like school restrictions or masking, but you also don’t want to get too lost in the underlying policy details.
+<button class="accordion">How do the Indices Compare to Just Using the Data?</button>
+<div class="panel"><br>
+    The new indices are designed to solve a specific problem: we have a lot of data across multiple datasets but sometimes we really just want an aggregate, summary measure. At present, the only other aggregate measure for COVID-19 policies is the Stringency Index, which gives a single value for each country. By contrast, these indices are at a lower level of aggregation, assigning a value for specific policy domains. So in principle, these indices are best used when you want a measure of a certain policy domain like school restrictions or masking, but you also don’t want to get too lost in the underlying policy details.
 
 For that reason, it is important to know the differences between the CoronaNet and OxCGRT datasets. The underlying data from CoronaNet, as we mentioned, contains 154 different indicators which are specific details of different policies, such as whether countries provide tests to all of the population or implement restrictions for specific business industries. You can read about all the indicators we have released so far in [this codebook](https://docs.google.com/document/d/1ScKWFv7jOHYVQlsbqvf--yU0mO2JscTsNEmb0SMXcsg/edit?usp=sharing). Note that these 154 indicators are different than the CoronaNet raw data, which contain even more policy information but have not yet been released in this easier to use format.
 
 The OxCGRT indicators, by contrast, are all coded on a qualitative scale and tend to have a lot more information in each indicator. For example, while CoronaNet has separate indicators for primary, secondary and elementary school closure, the OxCGRT data has this information contained within a single variable. You can learn more about the OxCGRT data in their [working paper](https://www.bsg.ox.ac.uk/research/publications/variation-government-responses-covid-19).
 
 Practically speaking, it makes a difference when you are trying to interpret the results of a model or analysis. If you use an index for masks, for example, and find an association with COVID-19 cases, you can interpret that association as applying to a fairly broad array of mask-related restrictions and policies in a country. By contrast, if you use the OxCGRT mask indicator or one of several CoronaNet mask indicators, you can explain an association in terms of very specific mask-related policies and a COVID-19 outcome.
-
 <br>
-
-## Is it ever better to use the indices versus the raw data?
-
+</div>
+<button class="accordion">Is it ever better to use the indices versus the raw data?</button>
+<div class="panel"><br>
 It is better to use the indices mainly in the following situations:
 
 1. You are concerned about data coding errors affecting your analysis. In that case, you can use our measures of uncertainty to see if different plausible values for policy activity affect your results. We wrote a [blog post about how to do this with the R statistical software package](https://www.robertkubinec.com/post/err_in_vars/). 
 
 2. You are trying to measure the simultaneous effect of multiple policies on an outcome. It may not be a good idea to include lots of policy indicators in the same analysis/model because these different policies may interact with each other, rendering interpretation difficult. By using the indices, you can avoid this problem and still obtain clear results because the indices are all independent of each other and combine information from lower-level indicators.
-
 <br>
+</div>
 
-## Is it ever better to use the raw data versus the indices?
-
+<button class="accordion">Is it ever better to use the raw data versus the indices?</button>
+<div class="panel"><br>
 It is better to use the  raw data in the following situations:
 
 1. Your research question is on a specific attribute or dimension of policy, such as antigen tests as opposed to all possible COVID-19 tests. There are more specific indicators on those types of  policies.
 
 2. You are not concerned about measurement error, such as when you are quite familiar with the data and data coding errors are unlikely to affect your analyses.
+<br>
+</div>
+
+<script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("activePanel");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          });
+        }
+</script>

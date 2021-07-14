@@ -1,0 +1,70 @@
+---
+pagetitle: Visualisation
+author: 
+output: 
+  html_document:
+    number_sections: false
+    css: style.css
+    includes:
+      after_body: footer.html
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,warning=FALSE)
+
+```
+
+\renewcommand{\topfraction}{.85}
+\renewcommand{\bottomfraction}{.7}
+\renewcommand{\textfraction}{.15}
+\renewcommand{\floatpagefraction}{.66}
+
+
+```{r, echo=FALSE,out.width="33%",out.height="15%"}
+knitr::include_graphics(c("images/logo_blavatnik.svg", "images/logo_coronanet.png", "images/logo_hfp_wide.jpg"))
+``` 
+
+***
+# About
+
+***
+
+## Disclaimers
+
+
+If you require any more information or have any questions about our site’s disclaimer, please feel free to contact us by email at to admin@coronanet-project.org. All the information on this website is published in good faith and for general information purpose only. We do not make any guarantees about the completeness, reliability and accuracy of this information. Any action you take upon the information you find on this website, is strictly at your own risk. We will not be liable for any losses and/or damages in connection with the use of our website.
+
+From our website, you can visit other websites by following hyperlinks to such external sites. While we strive to provide only quality links to useful and ethical websites, we have no control over the content and nature of these sites. These links to other websites do not imply a recommendation for all the content found on these sites. Site owners and content may change without notice and may occur before we have the opportunity to remove a link which may have gone ‘bad’.
+
+Please be also aware that when you leave our website, other sites may have different privacy policies and terms which are beyond our control. Please be sure to check the Privacy Policies of these sites as well as their “Terms of Service” before engaging in any business or uploading any information.
+
+***
+
+## Licenses
+
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/2.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/2.0/88x31.png" /></a>
+<br>
+<br>
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/2.0/">Creative Commons Attribution-NonCommercial 2.0 Generic License</a>.
+
+***
+
+## Consent
+
+
+By using our website, you hereby consent to our disclaimer and agree to its terms.
+
+***
+
+## Update
+
+
+Should we update, amend or make any changes to this document, those changes will be prominently posted here.
+
+***
+
+## Contact Us
+
+
+Please feel free to contact us via this mail: [admin@coronanet-project.org](mailto:admin@coronanet-project.org).
