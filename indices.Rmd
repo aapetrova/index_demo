@@ -5,8 +5,6 @@ output:
   html_document:
     number_sections: false
     css: style.css
-    includes:
-      after_body: footer.html
 ---
 
 ```{r setup, include=FALSE}
